@@ -1,0 +1,135 @@
+body {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media  (min-height: 1440px) {
+    .content h1 {
+        margin-top: 9%;
+
+        
+    }
+
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 10vw;
+    color: #fff;
+    font-weight: 600;
+    user-select: none;
+    margin-bottom: 1vw;
+    margin-top: -20vw;
+}
+.content p{
+    font-size: 3vw;
+    color: #fff;
+    font-weight: 600;
+    user-select: none;
+    margin-top: 3.2vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9ab7d4;
+}
+
+.wrapper {
+    position: absolute;
+    top: 56%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+}
+
+
+.heart {
+    position: absolute;
+    height: 8.5vw;
+    width: 8.5vw;
+    background-color: gray; 
+    margin-top: 4vw;
+    left: 1.7vw;
+    border: none;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    cursor: pointer;
+    justify-content: center;
+    
+}
+
+.heart:focus {
+    outline: none;
+}       
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    border-radius: 50%;
+    transition: background-color 0.3s ease; 
+}
+
+.heart::before {
+    top: -50%;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -50%;
+}
+
+
+.heart:hover {
+    transform: rotate(45deg) scale(1.2); 
+    background-color: red; 
+}
+
+.heart:hover::before,
+.heart:hover::after {
+    background-color: red;
+}
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Staatliches-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+  }
